@@ -65,10 +65,15 @@ public class Venda {
         }
         if (a == 1){
             System.out.println("O produto esta em promocao.");
-            System.out.println("Valor antes dos descontos: "+ quantidadeItens*produto.getvalorVenda());
-            System.out.println("Valor dos descontos: "+efetuarDesconto(desconto));
+
             if (efetuarDesconto(desconto)==0){
                 System.out.println("Desconto invalido");
+            }
+            else{
+
+                System.out.println("Valor antes dos descontos: "+ quantidadeItens*produto.getvalorVenda());
+                System.out.println("Porcentagem de descontos: "+desconto+"%");
+                System.out.println("Valor dos descontos: "+efetuarDesconto(desconto));
             }
         }
         System.out.println("Valor final: "+calcularValor());
